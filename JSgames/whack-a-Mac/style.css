@@ -1,0 +1,34 @@
+body {
+  font-family: cursive;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  background: url("./assets/windows-xp.png");
+  background-size: cover;
+}
+
+#board {
+  width: 540px;
+  height: 540px;
+
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  background: url("./assets/grass.jpg");
+  background-size: cover;
+  border: 3px solid white;
+  border-radius: 25px;
+}
+
+#board div {
+  width: 180px;
+  height: 180px;
+  background-image: url("./assets/pipe.png");
+  background-size: cover;
+}
+
+#board div img {
+  width: 100px;
+  height: 100px;
+}
