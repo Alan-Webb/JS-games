@@ -1,5 +1,7 @@
 let currentAppleTile;
 let currentLinuxTile;
+let score = 0;
+let gameOver = false;
 
 window.onload = function() {
   SetGame();
@@ -9,6 +11,7 @@ function SetGame() {
   for (let i = 0; i < 9; i++) {
     let tile = document.createElement("div");
     tile.id = i.toString();
+    tile.addEventListener("click", selectTile);
     document.getElementById("board").appendChild(tile);
   }
 
@@ -21,7 +24,13 @@ function getRandomTile() {
   return num.toString();
 }
 
+/* APPLE TILE MOVEMENT */
+
 function setApple() {
+  if (gameOver) {
+    return;
+  }
+
   if (currentAppleTile) {
     currentAppleTile.innerHTML = "";
   }
@@ -30,7 +39,7 @@ function setApple() {
   apple.src = "./assets/apple.png";
 
   let num = getRandomTile();
-  if (currentLinuxTile && currentLinuxTile.id == num) {
+  if (currentAppleTile && currentAppleTile.id == num) {
     return;
   }
 
@@ -38,7 +47,13 @@ function setApple() {
   currentAppleTile.appendChild(apple);
 }
 
+/* LINUX TILE MOVEMENT */
+
 function setLinux() {
+  if (gameOver) {
+    return;
+  }
+
   if (currentLinuxTile) {
     currentLinuxTile.innerHTML = "";
   }
@@ -47,7 +62,24 @@ function setLinux() {
   linux.src = "./assets/penguin.png";
 
   let num = getRandomTile();
-  
+  if (currentLinuxTile && currentLinuxTile.id == num) {
+    return;
+  }
+
   currentLinuxTile = document.getElementById(num);
   currentLinuxTile.appendChild(linux);
+}
+
+function selectTile() {
+  if (gameOver) {
+    return;
+  }
+  
+  if (this == currentAppleTile) {
+    score += 10;
+    document.getElementById("score").innerText = score.toString();
+  } else if (this == currentLinuxTile) {
+    document.getElementById("score").innerText = "GAME OVER: " + score.toString();
+    gameOver = true;
+  }
 }
