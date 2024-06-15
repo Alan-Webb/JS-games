@@ -1,5 +1,6 @@
 let currentAppleTile;
 let currentLinuxTile;
+let currentWindowsTile;
 let score = 0;
 let gameOver = false;
 
@@ -17,6 +18,7 @@ function SetGame() {
 
   setInterval(setApple, 1000);
   setInterval(setLinux, 2000);
+  setInterval(setWindows, 10000);
 }
 
 function getRandomTile() {
@@ -70,15 +72,42 @@ function setLinux() {
   currentLinuxTile.appendChild(linux);
 }
 
+/* WINDOWS TILE MOVEMENT */
+
+function setWindows() {
+  if (gameOver) {
+    return;
+  }
+
+  if (currentWindowsTile) {
+    currentWindowsTile.innerHTML = "";
+  }
+
+  let windows = document.createElement("img");
+  windows.src = "./assets/windows.png";
+
+  let num = getRandomTile();
+  if (currentWindowsTile && currentWindowsTile.id == num) {
+    return;
+  }
+
+  currentWindowsTile = document.getElementById(num);
+  currentWindowsTile.appendChild(windows);
+}
+
+
 function selectTile() {
   if (gameOver) {
     return;
   }
   
   if (this == currentAppleTile) {
-    score += 10;
+    score += 1;
     document.getElementById("score").innerText = score.toString();
-  } else if (this == currentLinuxTile) {
+  } else if (this == currentWindowsTile) {
+    score += 5;
+    document.getElementById("score").innerText = score.toString();
+  } else {
     document.getElementById("score").innerText = "GAME OVER: " + score.toString();
     gameOver = true;
   }
