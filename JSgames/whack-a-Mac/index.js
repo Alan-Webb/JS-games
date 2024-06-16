@@ -17,8 +17,8 @@ function SetGame() {
   }
 
   setInterval(setApple, 1000);
-  setInterval(setLinux, 2000);
-  setInterval(setWindows, 10000);
+  setInterval(setLinux, 5000);
+  setInterval(setWindows, 8000);
 }
 
 function getRandomTile() {
@@ -41,7 +41,7 @@ function setApple() {
   apple.src = "./assets/apple.png";
 
   let num = getRandomTile();
-  if (currentAppleTile && currentAppleTile.id == num) {
+  if (currentAppleTile && currentLinuxTile.id == num ||  currentAppleTile && currentWindowsTile.id == num) {
     return;
   }
 
@@ -64,7 +64,7 @@ function setLinux() {
   linux.src = "./assets/penguin.png";
 
   let num = getRandomTile();
-  if (currentLinuxTile && currentLinuxTile.id == num) {
+  if (currentLinuxTile && currentAppleTile.id == num || currentLinuxTile && currentWindowsTile == num) {
     return;
   }
 
@@ -87,14 +87,13 @@ function setWindows() {
   windows.src = "./assets/windows.png";
 
   let num = getRandomTile();
-  if (currentWindowsTile && currentWindowsTile.id == num) {
+  if (currentWindowsTile && currentWAppleTile.id == num || currentWindowsTile && currentLinuxTile == num) {
     return;
   }
 
   currentWindowsTile = document.getElementById(num);
   currentWindowsTile.appendChild(windows);
 }
-
 
 function selectTile() {
   if (gameOver) {
