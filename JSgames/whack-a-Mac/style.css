@@ -2,6 +2,7 @@ body {
   font-family: cursive;
   font-size: 1.3rem;
   font-weight: bold;
+  color: rgb(71, 27, 27);
   text-align: center;
   background: url("./assets/windows-xp.jpg");
   background-size: cover;
@@ -42,6 +43,15 @@ footer {
   background-color: green;
   border: 2px solid white;
   margin-top: 50px;
+  color: white;
+  font-size: 1rem;
+  text-align: left;
+  padding-top: 12px;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 6px;
 }
 
 @media only screen and (max-width: 2110) {
