@@ -1,4 +1,4 @@
-const sweets = ["Blue", "Orange", "Green", "Yellow", "Red", "Purple"];
+const sweets = ["Blue-Striped-Vertical", "Orange-Striped-Vertical", "Green-Striped-Horizontal", "Yellow-Striped-Horizontal", "Red", "Purple"];
 const board = [];
 const rows = 9;
 const columns = 9;
@@ -9,6 +9,12 @@ let otherTile;
 
 window.onload = function () {
   startGame();
+
+  window.setInterval(function(){
+    smashSweets();
+    slideSweets();
+    generateSweets();
+  }, 100);
 }
 
 function randomSweet() {
@@ -62,6 +68,10 @@ function dragDrop() {
 
 function dragEnd() {
 
+  if (currTile.src.includes("blank") || otherTile.src.includes("blank")) {
+    return;
+  }
+
   let currCoords = currTile.id.split("-");
   let r = parseInt(currCoords[0]);
   let c = parseInt(currCoords[1]);
@@ -83,5 +93,106 @@ function dragEnd() {
     let otherImg = otherTile.src;
     currTile.src = otherImg;
     otherTile.src = currImg;
+
+    let validMove = checkValid();
+    if (!validMove) {
+      let currImg = currTile.src;
+      let otherImg = otherTile.src;
+      currTile.src = otherImg;
+      otherTile.src = currImg;
+    }
+  }
+}
+
+function smashSweets() {
+  smashThree();
+  document.getElementById("score").innerText = score;
+}
+
+function smashThree() {
+
+  //CHECK ROWS
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < columns-2; c++) {
+      let sweet1 = board[r][c];
+      let sweet2 = board[r][c+1];
+      let sweet3 = board[r][c+2];
+
+      if (sweet1.src == sweet2.src && sweet2.src == sweet3.src && !sweet1.src.includes("blank")) {
+        sweet1.src = "./assets/blank.png";
+        sweet2.src = "./assets/blank.png";
+        sweet3.src = "./assets/blank.png";
+        score += 30;
+      }
+    }
+  }
+
+  //CHECK COLUMNS
+  for (let c = 0; c < columns; c++) {
+    for (let r = 0; r < rows -2; r++) {
+      let sweet1 = board[r][c];
+      let sweet2 = board[r+1][c];
+      let sweet3 = board[r+2][c];
+
+      if (sweet1.src == sweet2.src && sweet2.src == sweet3.src && !sweet1.src.includes("blank")) {
+        sweet1.src = "./assets/blank.png";
+        sweet2.src = "./assets/blank.png";
+        sweet3.src = "./assets/blank.png";
+        score += 30;
+      }
+    }
+  }
+}
+
+function checkValid() {
+
+  //CHECK ROWS
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < columns-2; c++) {
+      let sweet1 = board[r][c];
+      let sweet2 = board[r][c+1];
+      let sweet3 = board[r][c+2];
+
+      if (sweet1.src == sweet2.src && sweet2.src == sweet3.src && !sweet1.src.includes("blank")) {
+        return true;
+      }
+    }
+  }
+
+  //CHECK COLUMNS
+  for (let c = 0; c < columns; c++) {
+    for (let r = 0; r < rows -2; r++) {
+      let sweet1 = board[r][c];
+      let sweet2 = board[r+1][c];
+      let sweet3 = board[r+2][c];
+
+      if (sweet1.src == sweet2.src && sweet2.src == sweet3.src && !sweet1.src.includes("blank")) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+function slideSweets() {
+  for (let c = 0; c < columns; c++) {
+    let ind = rows - 1;
+    for (let r = columns-1; r >= 0; r--) {
+      if (!board[r][c].src.includes("blank")) {
+        board[ind][c].src = board[r][c].src;
+        ind -= 1;
+      }
+    }
+    for (let r = ind; r >=0; r--){
+      board[r][c].src = "./assets/blank.png";
+    }
+  }
+}
+
+function generateSweets() {
+  for (let c=0; c < columns; c++) {
+    if (board[0][c].src.includes("blank")) {
+      board[0][c].src = "./assets/" + randomSweet() + ".png";
+    }
   }
 }
