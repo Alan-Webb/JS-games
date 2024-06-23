@@ -144,6 +144,7 @@ function smashThree() {
   }
 }
 
+
 function checkValid() {
 
   //CHECK ROWS
