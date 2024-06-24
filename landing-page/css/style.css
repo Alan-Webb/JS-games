@@ -1,5 +1,6 @@
 body {
-  background-color: rgb(126, 147, 192);
+  background-image: linear-gradient(to bottom, #00f2fe 0%, #4facfe 100%);
+  font-family: "Ubuntu", sans-serif;
 }
 
 nav {
@@ -52,6 +53,10 @@ nav ul li a:hover {
   display: block;
 }
 
+h1, h2, h3 {
+  font-family: "Work Sans", sans-serif;
+}
+
 h1 {
   color: black;
   text-align: center;
@@ -65,9 +70,10 @@ h1 {
   height: auto;
   background-color: rgb(202, 203, 228);
   text-align: center;
-  padding: 40px 50px 70px;
+  padding: 20px 30px 50px;
   margin: 0 auto;
-  /* box-shadow: 10px 10px 0px rgb(0, 0, 0 / 40%), -10px -10px 0px rgb(255, 114, 114 / 80%); */
+  box-shadow: 10px 10px 0px rgb(114, 114, 214);
+  border-radius: 8px;
 }
 
 .aboutme-section {
@@ -84,6 +90,7 @@ h1 {
   background-image: url("../images/aboutme.jpg");
   background-size: cover;
   background-position: center;
+  border-radius: 10px;
 }
 
 .aboutme-text {
