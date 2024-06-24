@@ -39,3 +39,56 @@ nav ul li a:hover {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.hero {
+  padding-top: 130px;
+}
+
+.hero img {
+  border-style: none;
+  border-radius: 50%;
+  margin: 0 auto;
+  max-width: 350px;
+  display: block;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-size: 24px;
+  margin: 30px 0px 100px;
+}
+
+.aboutme {
+  width: 90%;
+  max-width: 1100px;
+  height: auto;
+  background-color: rgb(202, 203, 228);
+  text-align: center;
+  padding: 40px 50px 70px;
+  margin: 0 auto;
+  /* box-shadow: 10px 10px 0px rgb(0, 0, 0 / 40%), -10px -10px 0px rgb(255, 114, 114 / 80%); */
+}
+
+.aboutme-section {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+.aboutme-img {
+  height: 450px;
+  width: 400px;
+  background-image: url("../images/aboutme.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.aboutme-text {
+  height: auto;
+  width: 40%;
+  margin-left: 40px;
+  text-align: left;
+}
