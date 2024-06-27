@@ -21,12 +21,21 @@ let ship = {
   height : shipHeight
 }
 
-
+let shipImg;
 
 window.onload = function() {
   board = document.getElementById("board");
   board.width = boardWidth;
   board.height = boardHeight;
   context = board.getContext("2d");
+
+  // context.fillStyle = "green";
+  // context.fillRect(ship.x, ship.y, ship.width, ship.height);
+  shipImg = new Image();
+  shipImg.src = "./images/ship.png";
+  shipImg.onload = function() {
+    context.drawImage(shipImg, ship.x, ship.y, ship.width, ship.height);
+  }
+  
 }
 
