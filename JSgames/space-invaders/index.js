@@ -24,6 +24,13 @@ let ship = {
 let shipImg;
 shipMovementX = tileSize;
 
+/* INVADERS */
+let invaderArray = [];
+let invaderWidth = tileSize * 2;
+let invaderHeight = tileSize;
+let invaderX = tileSize;
+let invaderY = tileSize;
+
 window.onload = function() {
   board = document.getElementById("board");
   board.width = boardWidth;
@@ -34,21 +41,24 @@ window.onload = function() {
   shipImg.src = "./images/ship.png";
   shipImg.onload = function() {
     context.drawImage(shipImg, ship.x, ship.y, ship.width, ship.height);
-
   }
   requestAnimationFrame(update);
-  document.addEventListener("keydown", moveShip());
+  document.addEventListener("keydown", moveShip);
 }
 
 function update() {
-  requestAnimationFrame(update)
+  requestAnimationFrame(update);
+
+  context.clearRect(0, 0, board.width, board.height);
+
   context.drawImage(shipImg, ship.x, ship.y, ship.width, ship.height);
 }
 
+/* PLAYER SHIP MOVEMENT */
 function moveShip(e) {
-  if (e.code == "ArrowLeft") {
+  if (e.code == "ArrowLeft" && ship.x - shipMovementX >= 0) {
     ship.x -= shipMovementX;
-  } else if (e.code == "ArrowRight") {
+  } else if (e.code == "ArrowRight" && ship.x + shipMovementX + ship.width <= board.width) {
     ship.x += shipMovementX;
   }
 }
