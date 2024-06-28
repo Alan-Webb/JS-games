@@ -35,6 +35,14 @@ let invaderImg;
 let invaderRows = 2;
 let invaderColumns = 3;
 let invaderCount = 0;
+let invaderMovementX = 1;
+
+/* LASERS */
+let laserArray = [];
+let laserMovement = -10;
+
+let score = 0;
+let gameOver = false;
 
 window.onload = function() {
   board = document.getElementById("board");
@@ -52,20 +60,33 @@ window.onload = function() {
 
   invaderImg = new Image();
   invaderImg.src = "./images/invader.png";
+  createInvaders();
 
   requestAnimationFrame(update);
   document.addEventListener("keydown", moveShip);
+  document.addEventListener("keyup", shoot);
 }
-
-
 
 function update() {
   requestAnimationFrame(update);
 
+  if (gameOver) {
+    return;
+  }
+
   context.clearRect(0, 0, board.width, board.height);
 
   context.drawImage(shipImg, ship.x, ship.y, ship.width, ship.height);
+
+  for (let i = 0; i < invaderArray.length; i++) {
+    let invader = invaderArray[i];
+    if (invader.alive) {
+      context.drawImage(invaderImg, invader.x, invader.y, invader.width, invader.height);
+    }
+  }
 }
+
+
 
 /* PLAYER SHIP MOVEMENT */
 function moveShip(e) {
@@ -76,6 +97,7 @@ function moveShip(e) {
   }
 }
 
+/* INVADER SPAWNING */
 function createInvaders() {
   for (let c = 0; c < invaderColumns; c++) {
     for (let r = 0; r < invaderRows; r++) {
@@ -84,8 +106,11 @@ function createInvaders() {
         x : invaderX + c * invaderWidth,
         y : invaderY + r * invaderHeight,
         width : invaderWidth,
-        height : invaderHeight
+        height : invaderHeight,
+        alive : true
       }
+      invaderArray.push(invader);
     }
   }
+  invaderCount = invaderArray.length;
 }
