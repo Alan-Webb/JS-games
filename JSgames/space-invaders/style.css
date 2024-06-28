@@ -1,6 +1,10 @@
 body {
+  background: url("./images/space-background.png") no-repeat center center fixed;
   font-family: 'Courier New', Courier, monospace;
+  font-size: 1.65rem;
   text-align: center;
+  color: gold;
+  text-shadow: 2px 2px 2px white;
 }
 
 #board {
