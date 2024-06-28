@@ -39,7 +39,7 @@ let invaderMovementX = 1;
 
 /* LASERS */
 let laserArray = [];
-let laserMovement = -10;
+let laserMovementY = -10;
 
 let score = 0;
 let gameOver = false;
@@ -81,6 +81,16 @@ function update() {
   for (let i = 0; i < invaderArray.length; i++) {
     let invader = invaderArray[i];
     if (invader.alive) {
+      invader.x += invaderMovementX;
+
+      if (invader.x + invader.width >= board.width || invader.x <= 0) {
+        invaderMovementX *= -1;
+        invader.x += invaderMovementX * 2;
+
+        for (let j = 0; j < invaderArray.length; j ++) {
+          invaderArray[j].y += invaderHeight;
+        }
+      }
       context.drawImage(invaderImg, invader.x, invader.y, invader.width, invader.height);
     }
   }
@@ -113,4 +123,18 @@ function createInvaders() {
     }
   }
   invaderCount = invaderArray.length;
+}
+
+/* SHOOT LASERS */
+function shoot(e) {
+  if (e.code == "space") {
+    let laser = {
+      x : ship.x + shipWidth * 15 / 32;
+      y : ship.y,
+      width : tileSize / 8,
+      height : tileSize / 2,
+      used : false
+    }
+    laserArray.push(laser);
+  }
 }
