@@ -1,7 +1,7 @@
 /* BOARD */
-let tileSize = 32;
-let rows = 16;
-let columns = 16;
+const tileSize = 32;
+const rows = 16;
+const columns = 16;
 
 let board;
 let boardWidth = tileSize * columns; 
@@ -9,12 +9,12 @@ let boardHeight = tileSize * rows;
 let context;
 
 /* PLAYER SHIP */
-let shipWidth = tileSize * 2;
-let shipHeight = tileSize;
-let shipX = tileSize * columns / 2 - tileSize;
-let shipY = tileSize * rows - tileSize * 2;
+const shipWidth = tileSize * 2;
+const shipHeight = tileSize;
+const shipX = tileSize * columns / 2 - tileSize;
+const shipY = tileSize * rows - tileSize * 2;
 
-let ship = {
+const ship = {
     x : shipX,
     y : shipY,
     width : shipWidth,
@@ -144,6 +144,7 @@ function update() {
     context.fillText(score, 5, 20);
 }
 
+/* MOVEMENT */
 function moveShip(e) {
     if (gameOver) {
         return;
@@ -157,6 +158,7 @@ function moveShip(e) {
     }
 }
 
+/* INVADER SPAWNING */
 function createInvaders() {
     for (let c = 0; c < invaderColumns; c++) {
         for (let r = 0; r < invaderRows; r++) {

@@ -9,6 +9,7 @@ body {
 
 #board {
   background-color: black;
+  opacity: 0.8;
 }
 
 li {
@@ -16,5 +17,5 @@ li {
 }
 
 footer {
-  padding-top: 48px;
+  padding-top: 24px;
 }
