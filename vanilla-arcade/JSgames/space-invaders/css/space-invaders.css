@@ -1,0 +1,16 @@
+body {
+  background: url("../images/space-background.png") no-repeat center center fixed;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.65rem;
+  text-align: center;
+  color: rgb(228, 196, 14);
+  text-shadow: 2px 2px 2px rgb(223, 236, 233);
+}
+
+#board {
+  background-color: black;
+}
+
+li {
+  list-style: none;
+}
