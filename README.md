@@ -9,7 +9,6 @@ Collection of web dev projects
 * Javascript
 * Bootstrap
 * JQuery
-* Python
 * React
 
 ## Author
