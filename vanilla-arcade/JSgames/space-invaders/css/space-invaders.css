@@ -14,3 +14,7 @@ body {
 li {
   list-style: none;
 }
+
+footer {
+  padding-top: 48px;
+}
