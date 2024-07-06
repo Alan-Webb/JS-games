@@ -23,13 +23,13 @@ nav {
   background-color: rgb(87, 29, 141);
   color: white;
   padding: 1rem 0;
-  width: 89%;
+  width: 100vw;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* position: fixed;
-  z-index: 2; */
+  position: fixed;
+  z-index: 2;
 }
 
 .nav-container {
