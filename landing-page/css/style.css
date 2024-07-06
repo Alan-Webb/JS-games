@@ -1,45 +1,89 @@
-
-
-
-
-
-body {
-  background-image: linear-gradient(to bottom, #00f2fe 0%, #4facfe 100%);
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   font-family: "Work Sans", sans-serif;
 }
 
-/* NAVBAR */
+body {
+  background-image: linear-gradient(to bottom, #00f2fe 0%, #4facfe 100%);
+}
+
 a {
   text-decoration: none;
 }
 
-nav {
-  display: flex;
-  background-color: rgb(87, 29, 141);
-  justify-content: space-around;
-  position: fixed;
-  width: 100%;
-  z-index: 2;
-}
-
-nav ul {
-  display: flex;
-  padding: 0 10%;
+li {
   list-style: none;
-
 }
 
-nav ul li a {
-  font-size: 16px;
-  padding: 0 15px;
+/* NAVBAR */
+.nav-container,
+nav {
+  background-color: rgb(87, 29, 141);
   color: white;
-  transition: 0.2s;
-  text-transform: uppercase;
+  padding: 1rem 0;
+  width: 89%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* position: fixed;
+  z-index: 2; */
 }
 
-nav ul li a:hover {
-  transition: 0.2s;
-  color: rgb(41, 35, 35);
+.nav-container {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-menu li {
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.nav-menu li:hover {
+  background: black;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-right {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-container button {
+  background: purple;
+  color: white;
+  border: none;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.bar {
+  background-color: white;
+  display: block;
+  width: 23px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger {
+  display: none;
 }
 
 /* HERO */
@@ -289,4 +333,41 @@ footer .container {
 
 .copyright {
   color: white;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 4rem;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    right: -100%;
+    transition: 0.3s;
+    background-color: blue;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu li {
+    padding: 1.5rem;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
