@@ -21,16 +21,6 @@ li {
   list-style: none;
 }
 
-h1 {
-  text-align: left;
-  left: 0rem;
-  font-size: 24px;
-  text-align: center;
-  padding: 6rem 0 0 0;
-  color: black;
-  margin-bottom: 0;
-}
-
 h2 {
   font-size: 2rem;
 }
@@ -105,7 +95,29 @@ footer a:hover {
   flex: 1.5;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1 rem;
+  padding: 1rem;
 }
+
+h1 {
+  text-align: left;
+  font-size: 2rem;
+  text-align: center;
+  color: black;
+}
+
+.hero-info p {
+  font-style: italic;
+  padding: 1rem;
+  text-align: center;
+  max-width: 800px;
+ }
+
+ .hero-info h2 {
+  text-align: center;
+ }
 
 
 
@@ -341,6 +353,7 @@ footer {
 }
 
 /* MEDIA QUERIES */
+/* NAVBAR */
 @media only screen and (max-width: 768px) {
   .nav-menu {
     position: fixed;
@@ -374,5 +387,39 @@ footer {
   }
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/*HERO*/
+@media only screen and (min-width: 1200px) {
+  .hero-info p {
+    padding: 1rem 6rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .hero-info p {
+    padding: 1rem 8rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .hero-info p {
+    padding: 1rem 10rem;
+  }
+}
+
+/* @media only screen and (min-width: 1800px) {
+  .hero-info p {
+    padding: 1rem 12rem;
+  }
+} */
+
+@media only screen and (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+  }
+  .hero-img {
+    margin: auto;
   }
 }
