@@ -26,11 +26,13 @@ li {
   text-transform: uppercase;
   font-style: italic;
   padding: 1rem 0;
+  margin-bottom: 48px;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: fixed;
+  top: 0;
   z-index: 1;
 }
 
@@ -78,11 +80,45 @@ footer a:hover {
 .hero-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  max-width: 85%;
+  padding: 6rem 0 2em 0;
+  border: 3px solid black;
+  margin: auto;
+}
+
+h1 {
+  text-align: left;
+  left: 0rem;
+  font-size: 24px;
+  text-align: center;
+  padding: 6rem 0 0 0;
+  color: black;
+  margin-bottom: 0;
+}
+
+.tech-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  max-width: 47.5%;
+  font-size: 4rem;
+  border: 2px solid black;
+}
+
+.tech-grid p {
+  font-size: 0.8rem;
+  color: black;
+  text-align: center;
+}
+
+#heroImg {
+  max-width: 47.5%;
 }
 
 #heroImg img {
-  max-width: 400px;
+  width: 18rem;
+  max-width: 500px;
   border-radius: 40%;
 }
 
