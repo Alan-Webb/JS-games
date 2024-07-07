@@ -113,12 +113,31 @@ h1 {
   padding: 1rem;
   text-align: center;
   max-width: 800px;
- }
+}
 
- .hero-info h2 {
+.hero-info h2 {
   text-align: center;
- }
+}
 
+.hero-icons {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+}
+
+.hero-icons img {
+  width: 4rem;
+}
+
+.hero-icons p {
+  padding: 2px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: black;
+}
 
 
 
@@ -393,27 +412,21 @@ footer {
 /*HERO*/
 @media only screen and (min-width: 1200px) {
   .hero-info p {
-    padding: 1rem 6rem;
+    padding: 1rem 4rem;
   }
 }
 
 @media only screen and (min-width: 1400px) {
   .hero-info p {
-    padding: 1rem 8rem;
+    padding: 1rem 6rem;
   }
 }
 
 @media only screen and (min-width: 1600px) {
   .hero-info p {
-    padding: 1rem 10rem;
+    padding: 1rem 8rem;
   }
 }
-
-/* @media only screen and (min-width: 1800px) {
-  .hero-info p {
-    padding: 1rem 12rem;
-  }
-} */
 
 @media only screen and (max-width: 768px) {
   .hero-container {
