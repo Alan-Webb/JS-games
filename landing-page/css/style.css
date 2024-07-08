@@ -224,10 +224,10 @@ h1,
 }
 
 /* PROJECTS */
-#projects {
+#projects h2 {
+  color: #fff;
+  font-size: 2rem;
   margin: 5%;
-  width: 90%;
-  height: auto;
   text-align: center;
 }
 
@@ -238,23 +238,31 @@ h1,
   flex-flow: wrap;
 }
 
-#projects h2, 
-#contactme h2 {
-  color: #fff;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 2rem;
-}
-
-.vanilla-arcade {
+.project-card {
   width: 400px;
   height: 400px;
   background-color: #fff;
   position: relative;
   border-radius: 10px;
-  background-image: url("../images/vanilla-arcade.jpg");
   margin: 20px;
+  
   background-size: cover;
   background-position: center;
+}
+
+.project-card:nth-child(1) {
+  background: url("../images/vanilla-arcade.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.project-card:nth-child(2) {
+  background: url("../images/coming-soon.jpg");
+  background-size: cover;
+}
+
+.project-card:nth-child(3) {
+  background: url("../images/coming-soon.jpg");
+  background-size: cover;
 }
 
 .project-name {
