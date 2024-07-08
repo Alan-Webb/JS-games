@@ -11,7 +11,7 @@
   padding: 0;
   margin: 0;
   font-family: "Ubuntu", "Work Sans", sans-serif;
-  color: var(--clr-5);
+  color: #fff;
 }
 
 body {
@@ -36,7 +36,7 @@ h2 {
 /* NAVBAR */
 .nav-container {
   background-color: var(--clr-2);
-  color: var(--clr-5);
+  color: #fff;
   font-size: 1.5rem;
   text-transform: uppercase;
   font-style: italic;
@@ -48,7 +48,7 @@ h2 {
   justify-content: space-around;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .nav-menu {
@@ -83,7 +83,7 @@ footer a:hover {
 }
 
 .bar {
-  background-color: var(--clr-5);
+  background-color: #fff;
   display: block;
   width: 23px;
   height: 3px;
@@ -153,6 +153,7 @@ h1,
 }
 
 /* right side */
+
 .hero-img {
   flex: 1;
 }
@@ -163,6 +164,46 @@ h1,
   padding: 2rem;
 }
 
+.animated-border {
+  width: 425px;
+  height: 425px;
+  overflow: hidden;
+  position: relative;
+}
+
+.animated-border .hero-img {
+  width: 95%;
+  height: 95%;
+  background: #fff;
+  border-radius: 24px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  font-family: "Roboto Black", sans-serif;
+  font-size: 60px;
+}
+
+.animated-border::after {
+  content: "";
+  height: 150%;
+  width: 150%;
+  position: absolute;
+  background: conic-gradient(var(--clr-2), var(--clr-3), var(--clr-4), var(--clr-5));
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateZ(0deg);
+  animation: spin 8s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
 
 
 
@@ -186,7 +227,7 @@ h1,
 
 /* ABOUT */
 #about h2 {
-  color: var(--clr-5);
+  color: #fff;
   font-family: inherit;
   font-size: 2rem;
 }
@@ -246,7 +287,7 @@ h1,
 
 #projects h2, 
 #contactme h2 {
-  color: var(--clr-5);
+  color: #fff;
   font-family: "Ubuntu", sans-serif;
   font-size: 2rem;
 }
@@ -254,7 +295,7 @@ h1,
 .vanilla-arcade {
   width: 400px;
   height: 400px;
-  background-color: var(--clr-5);
+  background-color: #fff;
   position: relative;
   border-radius: 10px;
   background-image: url("../images/vanilla-arcade.jpg");
@@ -276,7 +317,7 @@ h1,
   left: 0;
   bottom: 0;
   z-index: 1;
-  background-color: var(--clr-5);
+  background-color: #fff;
   overflow: hidden;
   transition: 0.2s;
   margin-bottom: 10px;
@@ -315,7 +356,7 @@ h1,
   margin-bottom: 50px;
 }
 .contact h2, .contact p {
-  color: var(--clr-5);
+  color: #fff;
 }
 
 .contact-form {
@@ -323,7 +364,7 @@ h1,
   display: flex;
   text-align: left;
   margin: 0 auto;
-  color: var(--clr-5);
+  color: #fff;
 }
 
 .contact-form label {
@@ -367,7 +408,7 @@ h1,
 
 .message button:hover {
   background-color: rgb(133, 133, 173);
-  color: var(--clr-5);
+  color: #fff;
   transition: 0.2s;
 }
 
