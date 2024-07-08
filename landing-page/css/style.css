@@ -11,11 +11,11 @@
   padding: 0;
   margin: 0;
   font-family: "Ubuntu", "Work Sans", sans-serif;
-  color: white;
+  color: var(--clr-5);
 }
 
 body {
-  background-image: linear-gradient(to bottom, #00f2fe 0%, #4facfe 100%);
+  background-image: linear-gradient(to bottom, var(--clr-4) 0%, var(--clr-3) 100%);
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -35,8 +35,8 @@ h2 {
 
 /* NAVBAR */
 .nav-container {
-  background-color: rgb(87, 29, 141);
-  color: white;
+  background-color: var(--clr-2);
+  color: var(--clr-5);
   font-size: 1.5rem;
   text-transform: uppercase;
   font-style: italic;
@@ -83,7 +83,7 @@ footer a:hover {
 }
 
 .bar {
-  background-color: white;
+  background-color: var(--clr-5);
   display: block;
   width: 23px;
   height: 3px;
@@ -186,7 +186,7 @@ h1,
 
 /* ABOUT */
 #about h2 {
-  color: white;
+  color: var(--clr-5);
   font-family: inherit;
   font-size: 2rem;
 }
@@ -195,11 +195,11 @@ h1,
   width: 90%;
   max-width: 1100px;
   height: auto;
-  background-color: rgb(160, 162, 214);
+  background-color: var(--clr-4);
   text-align: center;
   padding: 20px 30px 50px;
   margin: 0 auto;
-  box-shadow: 10px 10px 0px rgb(114, 114, 214);
+  box-shadow: 10px 10px 0px var(--clr-2);
   border-radius: 8px;
   position: relative;
   top: 4rem;
@@ -246,7 +246,7 @@ h1,
 
 #projects h2, 
 #contactme h2 {
-  color: white;
+  color: var(--clr-5);
   font-family: "Ubuntu", sans-serif;
   font-size: 2rem;
 }
@@ -254,7 +254,7 @@ h1,
 .vanilla-arcade {
   width: 400px;
   height: 400px;
-  background-color: aliceblue;
+  background-color: var(--clr-5);
   position: relative;
   border-radius: 10px;
   background-image: url("../images/vanilla-arcade.jpg");
@@ -265,7 +265,7 @@ h1,
 
 .project-name {
   font-size: 1.3rem;
-  color: rgb(114, 114, 214);
+  color: var(--clr-2);
   font-family: inherit;
 }
 
@@ -276,7 +276,7 @@ h1,
   left: 0;
   bottom: 0;
   z-index: 1;
-  background-color: aliceblue;
+  background-color: var(--clr-5);
   overflow: hidden;
   transition: 0.2s;
   margin-bottom: 10px;
@@ -308,14 +308,14 @@ h1,
   height: auto;
   padding: 75px 0 50px 0;
   text-align: center;
-  background-color: rgb(114, 114, 214);
+  background-color: var(--clr-3);
 }
 
 .contact p {
   margin-bottom: 50px;
 }
 .contact h2, .contact p {
-  color: white;
+  color: var(--clr-5);
 }
 
 .contact-form {
@@ -323,7 +323,7 @@ h1,
   display: flex;
   text-align: left;
   margin: 0 auto;
-  color: white;
+  color: var(--clr-5);
 }
 
 .contact-form label {
@@ -367,20 +367,22 @@ h1,
 
 .message button:hover {
   background-color: rgb(133, 133, 173);
-  color: white;
+  color: var(--clr-5);
   transition: 0.2s;
 }
 
 /* FOOTER */
 footer {
-  background-color: rgb(87, 29, 141);
+  background-color: var(--clr-2);
   height: 90px;
   font-weight: bold;
   display: flex;
   justify-content: center;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 20px;
   line-height: 25px;
+  position: relative;
+  margin-bottom: -64px;
 }
 
 /* MEDIA QUERIES */
@@ -394,7 +396,7 @@ footer {
     align-items: center;
     right: -100%;
     transition: 0.3s;
-    background-color: rgb(87, 29, 141);
+    background-color: var(--clr-2);
   }
 
   .nav-menu.active {
