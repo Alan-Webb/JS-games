@@ -154,40 +154,25 @@ h1,
 }
 
 /* right side */
-
 .hero-img {
   flex: 1;
-}
-
-.hero-img img {
   width: 400px;
-  border: 2px solid var(--clr-1);
   border-radius: 50%;
   position: relative;
-  top: 3rem;
-  right: 2rem;
+  top: 4rem;
+  right: 3rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.animated-image {
+  background-image: url("../images/profile-pic.jpg");
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  margin: 20px;
+  box-shadow: 0 5px 5px 5px rgba(3, 4, 94, 0.2);
+  animation: animate 5s ease-in-out infinite;
+  transform: all 1s ease-in-out;
+}   
 
 /* ABOUT */
 #about h2 {
@@ -465,4 +450,15 @@ footer {
   .hero-img {
     margin: auto;
   }
+}
+
+/* KEYFRAMES */
+/* ANIMATED IMAGE */
+@keyframes animate {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }  
 }
