@@ -1,3 +1,11 @@
+:root {
+  --clr-1: #03045e;
+  --clr-2: #023e8a;
+  --clr-3: #0077b6;
+  --clr-4: #00b4d8;
+  --clr-5: #caf0f8;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -135,6 +143,7 @@ h1,
 .icon-container img {
   width: 4rem;
   margin-bottom: 0.3rem;
+  border-radius: 15%;
 }
 
 .icon-container img:hover {
@@ -143,15 +152,6 @@ h1,
   transition: 0.3s;
 }
 
-
-
-
-
-
-
-
-
-
 /* right side */
 .hero-img {
   flex: 1;
@@ -159,9 +159,10 @@ h1,
 
 .hero-img img {
   width: 400px;
-  border-radius: 50%;
-  padding: 1rem;
+  border-radius: 15%;
+  padding: 2rem;
 }
+
 
 
 
