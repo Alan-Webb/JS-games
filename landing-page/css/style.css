@@ -160,50 +160,11 @@ h1,
 
 .hero-img img {
   width: 400px;
-  border-radius: 15%;
+  border-radius: 20%;
   padding: 2rem;
+  margin: -5px;
 }
 
-.animated-border {
-  width: 425px;
-  height: 425px;
-  overflow: hidden;
-  position: relative;
-}
-
-.animated-border .hero-img {
-  width: 95%;
-  height: 95%;
-  background: #fff;
-  border-radius: 24px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: grid;
-  place-items: center;
-  font-family: "Roboto Black", sans-serif;
-  font-size: 60px;
-}
-
-.animated-border::after {
-  content: "";
-  height: 150%;
-  width: 150%;
-  position: absolute;
-  background: conic-gradient(var(--clr-2), var(--clr-3), var(--clr-4), var(--clr-5));
-  z-index: -1;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotateZ(0deg);
-  animation: spin 8s infinite linear;
-}
-
-@keyframes spin {
-  100% {
-    transform: translate(-50%, -50%) rotateZ(360deg);
-  }
-}
 
 
 
@@ -477,6 +438,7 @@ footer {
   }
   .icon-container img {
     width: 4.5rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -486,6 +448,7 @@ footer {
   }
   .icon-container img {
     width: 5rem;
+    font-size: 1rem;
   }
 }
 
