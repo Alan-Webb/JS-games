@@ -37,7 +37,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.3rem;
+  color: #fff;
 }
 
 /* NAVBAR */
@@ -193,12 +194,6 @@ footer a:hover {
 }   
 
 /* ABOUT */
-#about h2 {
-  color: #fff;
-  font-family: inherit;
-  font-size: 2rem;
-}
-
 .about {
   width: 90%;
   max-width: 1100px;
@@ -239,8 +234,6 @@ footer a:hover {
 
 /* PROJECTS */
 #projects h2 {
-  color: #fff;
-  font-size: 2rem;
   margin: 5%;
   text-align: center;
 }
@@ -303,10 +296,6 @@ footer a:hover {
   transition: 0.3s;
 }
 
-.content {
-  color: black;
-}
-
 .button,
 .message button {
   border: 5px solid rgb(114, 114, 214);
@@ -328,9 +317,8 @@ footer a:hover {
 }
 
 .contact p {
-  margin-bottom: 50px;
-}
-.contact h2, .contact p {
+  margin-bottom: 2rem;
+  padding: 1rem;
   color: #fff;
 }
 
