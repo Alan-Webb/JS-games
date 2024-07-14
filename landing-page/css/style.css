@@ -194,6 +194,10 @@ footer a:hover {
 }   
 
 /* ABOUT */
+.about h2 {
+  padding: 2rem;
+}
+
 .about {
   width: 90%;
   max-width: 1100px;
