@@ -216,6 +216,46 @@ footer a:hover {
 }
 
 /* image carousel */
+.carousel {
+  height: 435px;
+  width: 500px;
+  overflow: hidden;
+}
+
+.image-container {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-container img {
+  height: 400px;
+  width: 500px;
+  object-fit: contain;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-btn {
+  background-color: var(--clr-1);
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  width: 49.5%;
+  z-index: 1;
+}
+
+.carousel-btn:hover {
+  opacity: 0.9;
+}
+
+.carousel-btn:focus {
+  outline: none;
+}
 
 /* PROJECTS */
 #projects h2 {
