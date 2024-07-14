@@ -160,18 +160,6 @@ footer a:hover {
   margin-bottom: 0.3rem;
   border-radius: 15%;
 }
-
-/* .icon-container:hover {
-  font-size: 1rem;
-  transition: 0.3s;
-}
-
-.icon-container img:hover {
-  width: 6rem;
-  cursor: pointer;
-  transition: 0.3s;
-} */
-
 /* right side */
 .hero-img {
   flex: 1;
@@ -183,7 +171,7 @@ footer a:hover {
 }
 
 .animated-image {
-  background-image: url("../images/profile-pic.jpg");
+  background-image: url("../assets/images/profile-pic.jpg");
   width: 400px;
   height: 400px;
   background-size: cover;
@@ -194,7 +182,6 @@ footer a:hover {
 }   
 
 /* ABOUT */
-/* text side */
 .about h2 {
   padding: 2rem;
 }
@@ -221,62 +208,15 @@ footer a:hover {
   flex-flow: wrap;
 }
 
-.about-img {
-  height: 450px;
-  width: 400px;
-  background-image: url("../images/aboutme.jpg");
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-
 .about-text {
   height: auto;
   width: 40%;
   margin-left: 40px;
   text-align: left;
 }
+
 /* image carousel */
-.carousel {
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  height: 530px;
-  width: 500px;
-  overflow: hidden;
-}
 
-.image-container {
-  display: flex;
-  transform: translateX(0);
-  transition: transform 0.5s ease-in-out;
-}
-
-.image-container img {
-  width: 500px;
-  height: 500px;
-  object-fit: cover;
-}
-
-.buttons-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.carousel-btn {
-  background-color: rebeccapurple;
-  color: #fff;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-  width: 49.5%;
-}
-
-.carousel-btn:hover {
-  opacity: 0.9;
-}
-
-.carousel-btn:focus {
-  outline: none;
-}
 /* PROJECTS */
 #projects h2 {
   margin: 5%;
@@ -303,17 +243,17 @@ footer a:hover {
 }
 
 .project-card:nth-child(1) {
-  background: url("../images/vanilla-arcade.jpg") no-repeat center center;
+  background: url("../assets/images/vanilla-arcade.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .project-card:nth-child(2) {
-  background: url("../images/coming-soon.jpg");
+  background: url("../assets/images/coming-soon.jpg");
   background-size: cover;
 }
 
 .project-card:nth-child(3) {
-  background: url("../images/coming-soon.jpg");
+  background: url("../assets/images/coming-soon.jpg");
   background-size: cover;
 }
 
