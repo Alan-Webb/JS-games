@@ -18,7 +18,7 @@
 
 body {
   background-image: linear-gradient(to bottom, 
-  var(--clr-5) 0%, var(--clr-4) 20%, var(--clr-3) 40%, var(--clr-2) 60%, var(--clr-3) 80%, var(--clr-4));
+  var(--clr-4) 0%, var(--clr-3) 20%, var(--clr-2) 40%, var(--clr-3) 60%, var(--clr-4) 80%, var(--clr-3));
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -39,6 +39,7 @@ h1 {
 h2 {
   font-size: 2.3rem;
   color: #fff;
+  text-align: center;
 }
 
 /* NAVBAR */
@@ -182,35 +183,30 @@ footer a:hover {
 }   
 
 /* ABOUT */
-.about {
-  width: 90%;
-  height: auto;
-  background-color: var(--clr-4);
-  text-align: center;
-  padding: 2rem;
-  margin: 0 auto;
-  box-shadow: 10px 10px 0px var(--clr-2);
-  border-radius: 8px;
+#about h2 {
+  margin-top: 10rem;
 }
-
-.about h2 {
-  padding: 2rem;
-}
-
 
 .about-section {
-  padding: 5px;
+  width: 90%;
+  margin-top: 2rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-flow: wrap;
+  justify-content: space-evenly;
+}
+
+.about-text h3 {
+  padding: 0.5rem;
 }
 
 .about-text {
-  height: auto;
-  width: 40%;
-  margin-left: 40px;
-  text-align: left;
+  background-color: var(--clr-4);
+  width: 45%;
+  margin-right: 4rem;
+  padding: 1rem;
+  text-align: center;
+  line-height: 1.5rem;
 }
 
 /* image carousel */
@@ -244,15 +240,10 @@ footer a:hover {
   padding: 0.5rem;
   cursor: pointer;
   width: 49.5%;
-  z-index: 1;
 }
 
 .carousel-btn:hover {
   opacity: 0.9;
-}
-
-.carousel-btn:focus {
-  outline: none;
 }
 
 /* PROJECTS */
