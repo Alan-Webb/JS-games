@@ -18,7 +18,7 @@
 
 body {
   background-image: linear-gradient(to bottom, 
-  var(--clr-4) 0%, var(--clr-3) 20%, var(--clr-2) 40%, var(--clr-3) 60%, var(--clr-4) 80%, var(--clr-3));
+  var(--clr-4) 0%, var(--clr-3) 25%, var(--clr-2) 50%, var(--clr-3) 75%, var(--clr-4) 100%);
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -177,7 +177,7 @@ footer a:hover {
   height: 400px;
   background-size: cover;
   margin: 20px;
-  box-shadow: 0 5px 5px 5px rgba(3, 4, 94, 0.2);
+  box-shadow: 0 5px 5px 5px rgba(23, 24, 29, 0.3);
   animation: animate 5s ease-in-out infinite;
   transform: all 1s ease-in-out;
 }   
@@ -201,12 +201,23 @@ footer a:hover {
 }
 
 .about-text {
-  background-color: var(--clr-4);
-  width: 45%;
-  margin-right: 4rem;
+  width: 44%;
+  margin: 0 3.5rem;
+  margin-top: 3rem;
   padding: 1rem;
   text-align: center;
   line-height: 1.5rem;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-text h3 {
+  font-size: 1.5rem;
+  padding: 0;
 }
 
 /* image carousel */
@@ -404,7 +415,7 @@ footer {
 }
 
 /* MEDIA QUERIES */
-/* NAVBAR */
+/* navbar */
 @media only screen and (max-width: 768px) {
   .nav-menu {
     position: fixed;
@@ -440,8 +451,7 @@ footer {
     transform: translateY(-8px) rotate(-45deg);
   }
 }
-
-/*HERO*/
+/*hero*/
 @media only screen and (min-width: 1200px) {
   .hero-info p {
     padding: 1rem 4rem;
@@ -479,6 +489,28 @@ footer {
     margin: auto;
   }
 }
+/* about */
+@media only screen and (max-width: 1200px) {
+  .about-section {
+    flex-direction: column;
+  }
+  .about-text {
+    margin-left: 10rem;
+    width: 90%;
+  }
+  .carousel {
+    margin-left: 10rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about-text {
+    margin-left: 8rem;
+  }
+  .carousel {
+    margin-left: 4rem;
+  }
+}
+
 
 /* KEYFRAMES */
 /* ANIMATED HERO IMAGE */
