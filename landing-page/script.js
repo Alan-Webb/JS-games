@@ -1,4 +1,5 @@
-/* NAVBAR */
+// NAVBAR
+// JS representation from DOM
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 //hamburger animation
@@ -7,7 +8,8 @@ hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
-/* IMAGE CAROUSEL */
+// IMAGE CAROUSEL
+//JS representation form DOM
 const imgs = document.getElementById("imgs");
 const leftBtn = document.getElementById("prevBtn");
 const rightBtn = document.getElementById("nextBtn");
