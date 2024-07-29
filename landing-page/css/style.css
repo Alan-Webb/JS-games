@@ -131,13 +131,6 @@ footer a:hover {
 }
 
 /* HERO */
-.theme-btn {
-	width: 2.5rem;
-	position: absolute;
-	top: 6rem;
-	right: 3.5rem;
-}
-
 .hero-container {
 	display: flex;
 	padding: 2rem;
