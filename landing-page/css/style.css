@@ -111,6 +111,12 @@ footer a:hover {
 	left: 1rem;
 }
 
+.nav-right {
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+}
+
 .hamburger {
 	display: none;
 }
@@ -125,6 +131,13 @@ footer a:hover {
 }
 
 /* HERO */
+.theme-btn {
+	width: 2.5rem;
+	position: absolute;
+	top: 6rem;
+	right: 3.5rem;
+}
+
 .hero-container {
 	display: flex;
 	padding: 2rem;
@@ -152,7 +165,7 @@ footer a:hover {
 
 .hero-info h3 {
 	font-size: 2rem;
-  padding-top: 2rem;
+	padding-top: 2rem;
 }
 
 .hero-info p {
@@ -214,7 +227,6 @@ footer a:hover {
 
 .about-section {
 	width: 90%;
-	margin-top: 2rem;
 	padding: 1rem;
 	display: flex;
 	align-items: center;
