@@ -93,6 +93,7 @@ button:active {
 	padding: 0.5rem;
 }
 
+.nav-menu a:hover,
 .nav-left i:hover,
 footer a:hover {
 	color: #000;
@@ -124,6 +125,7 @@ footer a:hover {
 .hero-container {
 	display: flex;
 	padding: 2rem;
+	margin-top: 4rem;
 }
 
 /*left-side*/
@@ -195,7 +197,7 @@ footer a:hover {
 
 /* ABOUT */
 #about h2 {
-	margin-top: 10rem;
+	margin-top: 12rem;
 	font-size: 2rem;
 }
 
@@ -234,7 +236,7 @@ footer a:hover {
 /* image carousel */
 .carousel {
 	height: 435px;
-	width: 530px;
+	width: 500px;
 	overflow: hidden;
 }
 
@@ -262,7 +264,7 @@ footer a:hover {
 /* PROJECTS */
 #projects h2 {
 	font-size: 2rem;
-	margin-bottom: 4rem;
+	margin: 5rem;
 }
 
 .project-container {
@@ -366,6 +368,7 @@ footer a:hover {
 /* CONTACT */
 .contact {
 	text-align: center;
+	margin: 4rem;
 }
 
 .contact h2 {
@@ -377,8 +380,15 @@ footer a:hover {
 .contact p {
 	display: inline-block;
 	margin: 2rem;
+	padding: 3rem;
 	font-size: 1.5rem;
+	font-weight: 500;
 	color: #000;
+}
+
+.contact p:hover {
+	color: #fff;
+	transition: all 0.3s ease;
 }
 
 /* FOOTER */
@@ -466,7 +476,7 @@ footer {
 		width: 3rem;
 	}
 	.hero-img {
-		margin: auto;
+		margin-left: 9rem;
 	}
 }
 /* about */
