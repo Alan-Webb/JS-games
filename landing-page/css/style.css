@@ -374,6 +374,13 @@ footer a:hover {
 	color: #000;
 }
 
+.contact p {
+	display: inline-block;
+	margin: 2rem;
+	font-size: 1.5rem;
+	color: #000;
+}
+
 /* FOOTER */
 footer {
 	background-color: var(--clr-2);
@@ -382,9 +389,8 @@ footer {
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	padding: 1rem;
-	line-height: 2.2rem;
-	margin-bottom: -128px;
+	padding-top: 2.4rem;
+	line-height: 2rem;
 }
 
 /* MEDIA QUERIES */
