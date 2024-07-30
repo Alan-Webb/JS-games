@@ -254,7 +254,7 @@ footer a:hover {
 /* image carousel */
 .carousel {
 	height: 435px;
-	width: 500px;
+	width: 538px;
 	overflow: hidden;
 }
 
@@ -389,65 +389,6 @@ footer a:hover {
 	padding: 75px 0 50px 0;
 	text-align: center;
 	background-color: var(--clr-3);
-}
-
-.contact p {
-	margin-bottom: 2rem;
-	padding: 1rem;
-	color: #fff;
-}
-
-.contact-form {
-	max-width: 1100px;
-	display: flex;
-	text-align: left;
-	margin: 0 auto;
-	color: #fff;
-}
-
-.contact-form label {
-	display: block;
-	margin-bottom: 10px;
-}
-
-.message {
-	display: flex;
-	flex-direction: column;
-	width: 60%;
-}
-
-.message textarea {
-	border-radius: 5px;
-	border: none;
-}
-
-.contact-details {
-	flex: 1;
-	margin-right: 50px;
-}
-
-.contact-details input {
-	width: 90%;
-	border-radius: 5px;
-	border: none;
-	padding: 15px 20px;
-	margin-bottom: 20px;
-}
-
-.message button {
-	width: 140px;
-	height: 40px;
-	margin-top: 20px;
-	margin-left: auto;
-	font-weight: bold;
-	cursor: pointer;
-	transition: 0.3s;
-}
-
-.message button:hover {
-	background-color: rgb(133, 133, 173);
-	color: #fff;
-	transition: 0.2s;
 }
 
 /* FOOTER */
