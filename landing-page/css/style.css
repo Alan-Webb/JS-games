@@ -285,74 +285,105 @@ footer a:hover {
 	text-align: center;
 }
 
-.projects {
+.project-container {
 	display: flex;
-	align-items: center;
+	flex-wrap: wrap;
 	justify-content: center;
-	flex-flow: wrap;
+	gap: 20px;
+	border: 2px solid black;
 }
 
 .project-card {
-	width: 400px;
-	height: 400px;
-	background-color: #fff;
 	position: relative;
-	border-radius: 10px;
-	margin: 20px;
-
-	background-size: cover;
-	background-position: center;
-}
-
-.project-card:nth-child(1) {
-	background: url("../assets/vanilla-arcade.jpg") no-repeat center center;
-	background-size: cover;
-}
-
-.project-card:nth-child(2) {
-	background: url("../assets/coming-soon.jpg");
-	background-size: cover;
-}
-
-.project-card:nth-child(3) {
-	background: url("../assets/coming-soon.jpg");
-	background-size: cover;
-}
-
-.project-name {
-	font-size: 1.3rem;
-	color: var(--clr-2);
-	font-family: inherit;
-}
-
-.text {
-	position: absolute;
-	height: 65px;
-	width: 100%;
-	left: 0;
-	bottom: 0;
-	z-index: 1;
-	background-color: #fff;
+	width: 400px;
+	height: 500px;
+	margin: 1rem;
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 	overflow: hidden;
-	transition: 0.2s;
+	background-color: var(--clr-5);
+	border-radius: 15px;
+	transition: all 0.8s ease-in-out;
+}
+
+.project-card:hover {
+	transform: translateY(-10px);
+}
+
+.img-area {
+	position: relative;
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+}
+
+.img-area img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.img-area:hover img {
+	transform: scale(1.1);
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.project-card:hover .overlay {
+	opacity: 1;
+}
+
+.view-project,
+.more-info {
+	background-color: #03045e;
+	color: #fff;
+	width: 150px;
+	padding: 1rem;
+	border: 1px solid var(--clr-5);
+	box-shadow: 1px 1px 1px var(--clr-4);
+	border-radius: 8px;
+	font-size: 0.75rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;
 	margin-bottom: 10px;
 }
 
-.text:hover {
-	height: 175px;
-	transition: 0.3s;
+.view-project:hover,
+.more-info:hover {
+	background-color: var(--clr-2);
 }
 
-.button,
-.message button {
-	border: 5px solid rgb(114, 114, 214);
-	background-color: rgb(160, 162, 214);
-	color: rgb(41, 35, 35);
-	border-radius: 10px;
-	padding: 5px;
-	color: black;
+.info {
+	padding: 1rem;
+	text-align: center;
+}
+
+.info h3 {
+	margin: 0.5rem;
+	font-size: 1.5rem;
+	font-weight: bold;
 	text-transform: uppercase;
 }
+
+.info .tech {
+	margin: 0;
+	font-weight: bold;
+}
+
 
 /* CONTACT */
 .contact {
