@@ -378,6 +378,8 @@ footer a:hover {
 
 .info p {
 	color: black;
+	line-height: 1.4rem;
+	letter-spacing: 1px;
 }
 
 /* CONTACT */
