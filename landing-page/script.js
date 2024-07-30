@@ -4,8 +4,8 @@ const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 //hamburger animation
 hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
+	hamburger.classList.toggle("active");
+	navMenu.classList.toggle("active");
 });
 
 // IMAGE CAROUSEL
@@ -20,32 +20,32 @@ let idx = 0;
 let interval = setInterval(run, 3000);
 
 function run() {
-  idx++;
-  changeImage();
+	idx++;
+	changeImage();
 }
 
 function changeImage() {
-  if(idx > img.length - 1) {
-    idx = 0;
-  } else if(idx < 0) {
-    idx = img.length - 1;
-  }
-  imgs.style.transform = `translateX(${-idx * 500}px)`;
+	if (idx > img.length - 1) {
+		idx = 0;
+	} else if (idx < 0) {
+		idx = img.length - 1;
+	}
+	imgs.style.transform = `translateX(${-idx * 500}px)`;
 }
 
 function resetInterval() {
-  clearInterval(interval);
-  interval = setInterval(run, 3000);
+	clearInterval(interval);
+	interval = setInterval(run, 3000);
 }
 
 nextBtn.addEventListener("click", () => {
-  idx++;
-  changeImage();
-  resetInterval();
+	idx++;
+	changeImage();
+	resetInterval();
 });
 
 prevBtn.addEventListener("click", () => {
-  idx--;
-  changeImage();
-  resetInterval();
+	idx--;
+	changeImage();
+	resetInterval();
 });
