@@ -43,8 +43,6 @@ h1 {
 }
 
 h2 {
-	font-size: 2.3rem;
-	color: #fff;
 	text-align: center;
 }
 
@@ -55,7 +53,7 @@ button {
 	border: 1px solid var(--clr-3);
 	border-radius: 8px;
 	cursor: pointer;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 button:hover {
@@ -73,15 +71,14 @@ button:active {
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	font-style: italic;
-	padding: 1rem 0;
-	margin-bottom: 48px;
+	padding: 1rem;
 	width: 100vw;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	position: fixed;
 	top: 0;
-	z-index: 2;
+	z-index: 1;
 }
 
 .nav-menu {
@@ -93,10 +90,9 @@ button:active {
 	font-weight: 600;
 	letter-spacing: 1px;
 	cursor: pointer;
-	padding: 0 4px;
+	padding: 0.5rem;
 }
 
-.nav-menu a:hover,
 .nav-left i:hover,
 footer a:hover {
 	color: #000;
@@ -107,14 +103,8 @@ footer a:hover {
 	display: flex;
 	gap: 1rem;
 	position: absolute;
-	top: 1rem;
-	left: 1rem;
-}
-
-.nav-right {
-	position: absolute;
-	right: 1rem;
-	top: 1rem;
+	top: 1.5rem;
+	left: 1.5rem;
 }
 
 .hamburger {
@@ -143,38 +133,28 @@ footer a:hover {
 	justify-content: center;
 	align-items: center;
 	flex: 1.5;
-	gap: 1 rem;
 	padding: 1rem;
 }
 
 .hero-info h1,
 .hero-info h2,
-.hero-info h3,
 .hero-info p {
-	font-size: 2.3rem;
 	text-align: center;
 	color: #000;
-}
-
-.hero-info h3 {
-	font-size: 2rem;
-	padding-top: 2rem;
 }
 
 .hero-info p {
 	font-style: italic;
 	line-height: 2rem;
-	padding: 1rem;
 	max-width: 800px;
 	font-size: 1.2rem;
-	margin: 1.3rem;
+	margin: 2rem;
 }
 
 .hero-icons {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2rem;
-	padding: 1.5rem;
 }
 
 .icon-container {
@@ -195,8 +175,7 @@ footer a:hover {
 
 /* right side */
 .hero-img {
-	flex: 1;
-	width: 400px;
+	flex: 0.8;
 	border-radius: 50%;
 	position: relative;
 	top: 4rem;
@@ -208,7 +187,7 @@ footer a:hover {
 	width: 400px;
 	height: 400px;
 	background-size: cover;
-	margin: 20px;
+	margin: 2rem;
 	box-shadow: 0 5px 5px 5px rgba(23, 24, 29, 0.3);
 	animation: animate 5s ease-in-out infinite;
 	transform: all 1s ease-in-out;
@@ -217,6 +196,7 @@ footer a:hover {
 /* ABOUT */
 #about h2 {
 	margin-top: 10rem;
+	font-size: 2rem;
 }
 
 .about-section {
@@ -254,7 +234,7 @@ footer a:hover {
 /* image carousel */
 .carousel {
 	height: 435px;
-	width: 538px;
+	width: 530px;
 	overflow: hidden;
 }
 
@@ -281,7 +261,8 @@ footer a:hover {
 
 /* PROJECTS */
 #projects h2 {
-	margin: 5%;
+	font-size: 2rem;
+	margin-bottom: 4rem;
 }
 
 .project-container {
@@ -384,24 +365,25 @@ footer a:hover {
 
 /* CONTACT */
 .contact {
-	width: 100%;
-	height: auto;
-	padding: 75px 0 50px 0;
 	text-align: center;
-	background-color: var(--clr-3);
+}
+
+.contact h2 {
+	font-size: 2rem;
+	margin: 2rem;
+	color: #000;
 }
 
 /* FOOTER */
 footer {
 	background-color: var(--clr-2);
-	height: 90px;
+	height: 8rem;
 	font-weight: bold;
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	padding: 20px 0 20px 0;
-	line-height: 25px;
-	position: relative;
+	padding: 1rem;
+	line-height: 2.2rem;
 	margin-bottom: -128px;
 }
 
@@ -442,6 +424,7 @@ footer {
 		transform: translateY(-8px) rotate(-45deg);
 	}
 }
+
 /*hero*/
 @media only screen and (min-width: 1200px) {
 	.hero-info p {
