@@ -290,7 +290,6 @@ footer a:hover {
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 20px;
-	border: 2px solid black;
 }
 
 .project-card {
