@@ -368,7 +368,6 @@ footer a:hover {
 /* CONTACT */
 .contact {
 	text-align: center;
-	margin: 4rem;
 }
 
 .contact h2 {
@@ -393,14 +392,24 @@ footer a:hover {
 
 /* FOOTER */
 footer {
-	background-color: var(--clr-2);
-	height: 8rem;
-	font-weight: bold;
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	padding-top: 2.4rem;
-	line-height: 2rem;
+	padding: 3rem;
+}
+
+footer p,
+footer i {
+	color: #000;
+	font-weight: bold;
+	font-size: 1.3rem;
+	line-height: 2.5rem;
+}
+
+footer i:hover {
+	cursor: pointer;
+	color: #fff;
+	transition: 0.3s;
 }
 
 /* MEDIA QUERIES */
@@ -408,7 +417,7 @@ footer {
 @media only screen and (max-width: 768px) {
 	.nav-menu {
 		position: fixed;
-		top: 3.5rem;
+		top: 3rem;
 		width: 100%;
 		flex-direction: column;
 		align-items: center;
@@ -502,7 +511,7 @@ footer {
 }
 
 /* KEYFRAMES */
-/* ANIMATED HERO IMAGE */
+/* animated hero image */
 @keyframes animate {
 	0%,
 	100% {
