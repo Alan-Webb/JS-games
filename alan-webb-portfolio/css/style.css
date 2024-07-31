@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-	--clr-1: #03045e;
-	--clr-2: #023e8a;
-	--clr-3: #0077b6;
-	--clr-4: #00b4d8;
-	--clr-5: #caf0f8;
+	--nav-and-btn: #03045e;
+	--bg-dark: #023e8a;
+	--bg-medium-and-btn-border: #0077b6;
+	--bg-light-and-box-shadow: #00b4d8;
+	--project-card-bg: #caf0f8;
+	--text-color-1: #fff;
+	--text-color-2: #000;
 }
 
 * {
@@ -13,17 +15,17 @@
 	padding: 0;
 	margin: 0;
 	font-family: "Ubuntu", "Work Sans", sans-serif;
-	color: #fff;
+	color: var(--text-color-1);
 }
 
 body {
-	background-image: linear-gradient(
+	background: linear-gradient(
 		to bottom,
-		var(--clr-4) 0%,
-		var(--clr-3) 25%,
-		var(--clr-2) 50%,
-		var(--clr-3) 75%,
-		var(--clr-4) 100%
+		var(--bg-light-and-box-shadow) 0%,
+		var(--bg-medium-and-btn-border) 25%,
+		var(--bg-dark) 50%,
+		var(--bg-medium-and-btn-border) 75%,
+		var(--bg-light-and-box-shadow) 100%
 	);
 	display: flex;
 	flex-direction: column;
@@ -47,10 +49,10 @@ h2 {
 }
 
 button {
-	background-color: var(--clr-1);
+	background-color: var(--nav-and-btn);
 	padding: 0.5rem;
-	color: #fff;
-	border: 1px solid var(--clr-3);
+	color: var(--text-color-1);
+	border: 1px solid var(--bg-medium-and-btn-border);
 	border-radius: 8px;
 	cursor: pointer;
 	font-size: 1rem;
@@ -66,8 +68,8 @@ button:active {
 
 /* NAVBAR */
 .nav-container {
-	background-color: var(--clr-2);
-	color: #fff;
+	background-color: var(--nav-and-btn);
+	color: var(--text-color-1);
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	font-style: italic;
@@ -96,7 +98,7 @@ button:active {
 .nav-menu a:hover,
 .nav-left i:hover,
 footer a:hover {
-	color: #000;
+	color: var(--text-color-2);
 	transition: all 0.3s ease-in-out;
 }
 
@@ -113,7 +115,7 @@ footer a:hover {
 }
 
 .bar {
-	background-color: #fff;
+	background-color: var(--text-color-1);
 	display: block;
 	width: 23px;
 	height: 3px;
@@ -142,7 +144,7 @@ footer a:hover {
 .hero-info h2,
 .hero-info p {
 	text-align: center;
-	color: #000;
+	color: var(--text-color-2);
 }
 
 .hero-info p {
@@ -165,7 +167,7 @@ footer a:hover {
 	text-align: center;
 	font-weight: bold;
 	font-size: 0.8rem;
-	color: black;
+	color: var(--text-color-2);
 	margin-top: 1.5rem;
 }
 
@@ -190,7 +192,7 @@ footer a:hover {
 	height: 400px;
 	background-size: cover;
 	margin: 2rem;
-	box-shadow: 0 5px 5px 5px rgba(23, 24, 29, 0.3);
+	box-shadow: 0 5px 5px 5px var(--bg-light-and-box-shadow);
 	animation: animate 5s ease-in-out infinite;
 	transform: all 1s ease-in-out;
 }
@@ -279,9 +281,9 @@ footer a:hover {
 	width: 400px;
 	height: 400px;
 	margin: 1rem;
-	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 2px 20px var(--bg-light-and-box-shadow);
 	overflow: hidden;
-	background-color: var(--clr-5);
+	background-color: var(--project-card-bg);
 	border-radius: 15px;
 	transition: all 0.8s ease-in-out;
 }
@@ -327,12 +329,11 @@ footer a:hover {
 }
 
 .view-project {
-	background-color: #03045e;
-	color: #fff;
+	color: var(--text-color-1);
 	width: 150px;
 	padding: 1rem;
-	border: 1px solid var(--clr-5);
-	box-shadow: 1px 1px 1px var(--clr-4);
+	border: 1px solid var(--project-card-bg);
+	box-shadow: 1px 1px 1px var(--bg-light-and-box-shadow);
 	border-radius: 8px;
 	font-size: 0.75rem;
 	font-weight: bold;
@@ -340,10 +341,6 @@ footer a:hover {
 	letter-spacing: 1px;
 	cursor: pointer;
 	margin-bottom: 10px;
-}
-
-.view-project:hover {
-	background-color: var(--clr-2);
 }
 
 .info {
@@ -356,7 +353,7 @@ footer a:hover {
 	font-size: 1.5rem;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: #000;
+	color: var(--text-color-2);
 }
 
 .info p {
@@ -373,7 +370,7 @@ footer a:hover {
 .contact h2 {
 	font-size: 2rem;
 	margin: 2rem;
-	color: #000;
+	color: var(--text-color-2);
 }
 
 .contact p {
@@ -382,11 +379,11 @@ footer a:hover {
 	padding: 3rem;
 	font-size: 1.5rem;
 	font-weight: 500;
-	color: #000;
+	color: var(--text-color-2);
 }
 
 .contact p:hover {
-	color: #fff;
+	color: var(--text-color-1);
 	transition: all 0.3s ease;
 }
 
@@ -400,7 +397,7 @@ footer {
 
 footer p,
 footer i {
-	color: #000;
+	color: var(--text-color-2);
 	font-weight: bold;
 	font-size: 1.3rem;
 	line-height: 2.5rem;
@@ -408,7 +405,7 @@ footer i {
 
 footer i:hover {
 	cursor: pointer;
-	color: #fff;
+	color: var(--text-color-1);
 	transition: 0.3s;
 }
 
@@ -423,7 +420,7 @@ footer i:hover {
 		align-items: center;
 		right: -100%;
 		transition: 0.3s;
-		background-color: var(--clr-2);
+		background-color: var(--nav-and-btn);
 	}
 
 	.nav-menu.active {
