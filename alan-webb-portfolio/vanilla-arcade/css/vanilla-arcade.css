@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../images/vanilla-arcade.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Space Grotesk", sans-serif;
+  color: white;
+}
+
+h1 {
+  font-family: "Pacifico", sans-serif;
+  color: rgb(223, 125, 125);
+  background-color: black;
+}
+
+a {
+  color: pink;
+  background-color: black;
+  display: block;
+}
