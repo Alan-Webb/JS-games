@@ -1,6 +1,6 @@
-# portfolio-projects
+# JS-game
 
-Collection of web dev projects
+Collection of simple JS browser games
 
 ## Built with
 
