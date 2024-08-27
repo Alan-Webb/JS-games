@@ -1,4 +1,4 @@
-# JS-game
+# JS-games
 
 Collection of simple JS browser games
 
