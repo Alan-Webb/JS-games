@@ -1,9 +1,0 @@
-body {
-  font-family: 'Lobster', sans-serif;
-  text-align: center;
-  background: url("./images/background-image.jpeg");
-  background-size: cover;
-  font-size: 2.2rem;
-  color: rgb(45, 170, 45);
-  text-shadow: 4px 4px 4px black;
-}
